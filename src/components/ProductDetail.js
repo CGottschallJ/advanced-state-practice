@@ -1,4 +1,5 @@
 import React from "react";
+import { Reviews } from "./Reviews"
 
 function ProductDetail(props) {
   const {name,description,rating,imgUrl} = props.product;
@@ -14,11 +15,11 @@ function ProductDetail(props) {
         <div className="caption">
           <h4><a href="#">{name}</a>
           </h4>
-          <p>{description} 
+          <p>{description}
           </p>
         </div>
         <div className="ratings">
-          <p className="pull-right">15 reviews</p>
+          <Reviews product={props.product} />
           <p>
             {stars}
           </p>
